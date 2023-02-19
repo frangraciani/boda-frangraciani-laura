@@ -408,7 +408,7 @@ section .header {
 
 .hero {
     min-height: 750px;
-    background: url("../img/hero-min.jpg") center center;
+    background: url("../img/1653225154261.jpeg") ;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -433,7 +433,7 @@ section .header {
 }
 
 .hero .hero-content {
-    padding-top: 40%
+    padding-top: 5%
 }
 
 .hero .hero-content img {
