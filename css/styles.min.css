@@ -409,6 +409,7 @@ section .header {
 .hero {
     min-height: 750px;
     background: url("../img/1653225154261.jpeg") ;
+    background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
