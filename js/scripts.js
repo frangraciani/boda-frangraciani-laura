@@ -170,6 +170,10 @@ $(document).ready(function () {
         $('#map-content').toggleClass('toggle-map-content');
         $('#btn-show-content').toggleClass('toggle-map-content');
     });
+    $('#btn-show-map-celebration').click(function () {
+        $('#map-content').toggleClass('toggle-map-content');
+        $('#btn-show-content').toggleClass('toggle-map-content');
+    });
     $('#btn-show-content').click(function () {
         $('#map-content').toggleClass('toggle-map-content');
         $('#btn-show-content').toggleClass('toggle-map-content');
@@ -241,31 +245,47 @@ $(document).ready(function () {
 
 // Google map
 function initMap() {
-    var location = {lat: 22.5932759, lng: 88.27027720000001};
+    var location = {lat: 36.9198621988053269, lng:-6.077461103086225};
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
-        zoom: 15,
+        zoom: 14,
         center: location,
-        scrollwheel: false
+        scrollwheel: true
     });
 
     var marker = new google.maps.Marker({
         position: location,
         map: map
     });
+
+    var infowindow = new google.maps.InfoWindow({
+        content: '<a href="https://goo.gl/maps/zktLBUpwXgN8TCWN8")>Indicaciones de la ubicación de la parroquia</a>'
+      });
+     
+    marker.addListener('click', function() {
+        infowindow.open(map, marker);
+      });
 }
 
 function initBBSRMap() {
-    var la_fiesta = {lat: 20.305826, lng: 85.85480189999998};
+    var la_fiesta = {lat: 36.9211118083395, lng: -6.063914055196587};
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
-        zoom: 15,
+        zoom: 14,
         center: la_fiesta,
-        scrollwheel: false
+        scrollwheel: true
     });
 
     var marker = new google.maps.Marker({
         position: la_fiesta,
-        map: map
+        map: map,
     });
+
+    var infowindow = new google.maps.InfoWindow({
+        content: '<a href="https://goo.gl/maps/hequJsU9LMqywY9e8")>Indicaciones de la ubicación del salón de celebraciones</a>'
+      });
+     
+    marker.addListener('click', function() {
+        infowindow.open(map, marker);
+      });
 }
 
 // alert_markup
