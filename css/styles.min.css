@@ -407,7 +407,7 @@ section .header {
 }
 
 .hero {
-    min-height: 750px;
+    min-height: 1280px;
     background: url("../img/1653225154261.jpeg") ;
     background-position: center;
     -webkit-background-size: cover;
@@ -1087,4 +1087,8 @@ body.modal-open {
 
 .modal-body {
     padding: 25px
+}
+
+.location {
+    padding: 0 10px;
 }
